@@ -9,10 +9,10 @@
 
 <script>
     export default{
-        props:['cityCode'],
+        props:['cityCode', 'image'],
         methods:{
             loadCity(){
-                Event.$emit('load-city', { city: this.cityCode })
+                Event.$emit('load-city', { city: this.cityCode, image: this.image })
             }
         }
     }

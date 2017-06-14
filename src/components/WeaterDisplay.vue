@@ -14,7 +14,8 @@
             return {
                 temperatura: "",
                 opis: "",
-                detalji: ""
+                detalji: "",
+
             }
         },
 
@@ -27,7 +28,8 @@
                         units: "metric"
                     }
                 }).then((response) => {
-                        console.log(response.data);
+                        this.temperatura = Math.round(response.data.main.temp)
+
                 })
             });
         }
